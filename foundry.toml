@@ -1,0 +1,22 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+# BSC Pascal 硬分叉（2025-02-25）= 以太坊 Prague EVM 版本
+# EIP-7702 / BEP-441 已激活
+evm_version = "prague"
+solc_version = "0.8.28"
+
+remappings = [
+    "@openzeppelin/contracts=lib/openzeppelin-contracts/contracts",
+    "@openzeppelin/contracts-upgradeable=lib/openzeppelin-contracts-upgradeable/contracts",
+    "forge-std/=lib/forge-std/src/",
+    "solmate/=lib/solmate/src/",
+]
+
+[rpc_endpoints]
+bsc_testnet = "https://bnb-testnet.g.alchemy.com/v2/deHKMj6sxxxUn7h0uIzHt"
+
+[profile.ci]
+# 跳过 interactive prompt
+solc_version = "0.8.28"

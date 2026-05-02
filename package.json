@@ -1,0 +1,24 @@
+{
+  "name": "eip-7702-bsc-demo",
+  "version": "1.0.0",
+  "description": "EIP-7702 / BEP-441 on BSC Testnet — B 代付 gas，A 转合约代币给 C",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx scripts/01-local-demo.ts",
+    "dev:sponsored": "tsx scripts/02-sponsored-demo.ts",
+    "build": "tsc",
+    "foundry:install": "forge install",
+    "foundry:build": "forge build",
+    "foundry:test": "forge test -vvv",
+    "foundry:deploy": "forge script script/DeployAndInit.s.sol --rpc-url bsc_testnet --broadcast --verify"
+  },
+  "dependencies": {
+    "viem": "^2.29.0",
+    "dotenv": "^16.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0"
+  }
+}
